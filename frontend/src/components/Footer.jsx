@@ -1,5 +1,6 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
+ 
 const Footer = () => {
   return (
     <>
@@ -52,81 +53,40 @@ const Footer = () => {
               </div>
               <div className="footer-middle">
                 <div className="row">
-                  <div className="col-lg-3 col-md-6 col-sm-6">
+                
+
+                  <div className="col-lg-5 col-md-6 col-sm-6">
                     <div className="footer-widget widget widget_nav_menu">
-                      <h4 className="widget-headline">Important Links</h4>
+                      <h4 className="widget-headline">SUPERTOOL</h4>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>
+                  <div className="col-lg-2 col-md-6 col-sm-6">
+                    <div className="footer-widget widget widget_nav_menu">
+                      <h4 className="widget-headline">Useful Links</h4>
                       <ul>
+
                         <li>
-                          <a href="#">Terms and conditions</a>
+                          <Link to="/">Home</Link>
                         </li>
                         <li>
-                          <a href="#">Disclaimer and copyright</a>
+                          <Link to="/about">About</Link>
                         </li>
                         <li>
-                          <a href="#">Cookie policy</a>
+                          <Link to="/contact">Contact</Link>
                         </li>
                         <li>
-                          <a href="#">Privacy policy</a>
+                          <Link to="#">Terms and conditions</Link>
                         </li>
                         <li>
-                          <a href="#">Equality and diversity</a>
-                        </li>
-                        <li>
-                          <a href="#">Complaints procedure</a>
+                          <Link to="#">Privacy policy</Link>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-sm-6">
                     <div className="footer-widget widget widget_nav_menu">
-                      <h4 className="widget-headline">Site Highlight</h4>
-                      <ul>
-                        <li>
-                          <a href="#">Student videos</a>
-                        </li>
-                        <li>
-                          <a href="#">Photo gallery</a>
-                        </li>
-                        <li>
-                          <a href="#">TSC prospectus</a>
-                        </li>
-                        <li>
-                          <a href="#">Student newsletter</a>
-                        </li>
-                        <li>
-                          <a href="#">Student portal</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-sm-6">
-                    <div className="footer-widget widget widget_nav_menu">
-                      <h4 className="widget-headline">Help Center</h4>
-                      <ul>
-                        <li>
-                          <a href="#">Courses</a>
-                        </li>
-                        <li>
-                          <a href="#">How to apply for admission</a>
-                        </li>
-                        <li>
-                          <a href="#">Admission Documents</a>
-                        </li>
-                        <li>
-                          <a href="#">Frequently asked questions</a>
-                        </li>
-                        <li>
-                          <a href="#">Student accommodation</a>
-                        </li>
-                        <li>
-                          <a href="#">Student Jobs</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-lg-2 col-md-6 col-sm-6">
-                    <div className="footer-widget widget widget_nav_menu">
-                      <h4 className="widget-headline">Services</h4>
+                      <h4 className="widget-headline">Popular Tools</h4>
                       <ul>
                         <li>
                           <a href="#">Counselling</a>
@@ -146,7 +106,7 @@ const Footer = () => {
                       </ul>
                     </div>
                   </div>
-                  <div className="col-lg-2 col-md-6 col-sm-6">
+                  <div className="col-lg-3 col-md-6 col-sm-6">
                     <div className="footer-widget widget widget_nav_menu">
                       <h4 className="widget-headline">Location</h4>
                       <ul className="contact_info_list">

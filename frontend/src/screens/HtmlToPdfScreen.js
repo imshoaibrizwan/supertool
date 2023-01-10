@@ -2,13 +2,14 @@ import React, { useRef, useState } from "react";
 import { Alert } from "react-bootstrap";
 import jsPDF from "jspdf";
 import JoditEditor from "jodit-react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const HtmlToPdfScreen = () => {
   const editor = useRef(null);
   const [show, setShow] = useState(false);
   const [document, setDocument] = useState();
-
   const [userHtml, setUserHtml] = useState();
+  const [validate, setValidate] = useState(false);
 
   const handleGeneratePdf = (e) => {
     e.preventDefault();
@@ -33,6 +34,10 @@ const HtmlToPdfScreen = () => {
   const downloadHandler = () => {
     document.save("document");
   };
+
+  function onChange() {
+    setValidate(true);
+  }
 
   return (
     <div
@@ -77,6 +82,11 @@ const HtmlToPdfScreen = () => {
               {show === true && (
                 <div>
                   <Alert variant={"success"}>Pdf Generated Successfully</Alert>
+                  <ReCAPTCHA
+                    sitekey="6Le8fecjAAAAAG7pra5ZwIW8btHzTdbH4sFzYy19"
+                    onChange={onChange}
+                  />
+
                   <button
                     className="button"
                     style={{
@@ -88,6 +98,7 @@ const HtmlToPdfScreen = () => {
                       padding: "5px 10px",
                     }}
                     onClick={downloadHandler}
+                    disabled={!validate}
                   >
                     Download
                   </button>

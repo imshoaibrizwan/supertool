@@ -10,12 +10,12 @@ const HomeScreen = () => {
       <section className="category-section-area">
         <div className="container custom-container-01">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-md-9">
               <div className="section-title-wrapper d-flex justify-content-between">
                 <div className="theme-section-title">
-                  <span className="subtitle">CATEGORIES</span>
-                  <h4 className="title">Popular Discipline &amp; Collage</h4>
+                  <h4 className="title">Popular Tools</h4>
                 </div>
+
                 <ul className="nav nav-pills">
                   <li className="nav-item">
                     <a
@@ -39,282 +39,313 @@ const HomeScreen = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-          <div className="tab-content">
-            <div className="tab-pane fade show active" id="discipline">
-              <div className="destination-items-wrap">
-                <div className="destination-single-item style-01">
-                  <Link to="/htmltopdf">
-                    <div className="thumbnail">
-                      <img src="assets/img/htmltopdf.png" alt="" />
+              <div className="tab-content">
+                <div className="tab-pane fade show active" id="discipline">
+                  <div className="destination-items-wrap">
+                    <div className="destination-single-item style-01">
+                      <Link to="/htmltopdf">
+                        <div className="thumbnail">
+                          <img src="assets/img/htmltopdf.png" alt="" />
+                        </div>
+
+                        <h6 className="name">HTML to PDF</h6>
+                      </Link>
                     </div>
 
-                    <h6 className="name">HTML to PDF</h6>
-                  </Link>
-                </div>
-
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/science.png"
-                      alt=""
-                    />
+                    <div className="destination-single-item style-01">
+                      <Link to="/imagetopdf">
+                        <div className="thumbnail">
+                          <img
+                            src="assets/img/sections/desipline/science.png"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">Image to PDf</h6>
+                      </Link>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/art.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Art, Design &amp; <br /> Culture
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/business.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Business &amp; <br /> Management
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/pc.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Computer <br /> Science &amp; IT
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/book.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Education &amp; <br /> Training
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/click.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Engeneering &amp; <br /> Technology
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/french-fry.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Hopitality &amp; <br /> Sports
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/news-paper.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Journalism &amp; <br /> Media
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/first-aid-kit.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Medicine &amp; <br /> Health
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/law.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">Law</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/enverment.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">Social Science</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/humanity.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">Humanities</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/recicle.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Enviromental <br /> Studies
+                      </h6>
+                    </div>
                   </div>
-                  <h6 className="name">
-                    science <br /> &amp; professional
-                  </h6>
                 </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/art.png" alt="" />
+                <div className="tab-pane fade" id="collage">
+                  <div className="destination-items-wrap">
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/french-fry.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Hopitality &amp; <br /> Sports
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/news-paper.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Journalism &amp; <br /> Media
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/first-aid-kit.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Medicine &amp; <br /> Health
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/law.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">Law</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/enverment.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">Social Science</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/humanity.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">Humanities</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/recicle.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Enviromental <br /> Studies
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/foresty.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Agriculture &amp; <br /> Foresty
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/science.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        science <br /> &amp; professional
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/art.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Art, Design &amp; <br /> Culture
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/business.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Business &amp; <br /> Management
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/pc.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Computer <br /> Science &amp; IT
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/book.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Education &amp; <br /> Training
+                      </h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/click.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Engeneering &amp; <br /> Technology
+                      </h6>
+                    </div>
                   </div>
-                  <h6 className="name">
-                    Art, Design &amp; <br /> Culture
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/business.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Business &amp; <br /> Management
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/pc.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Computer <br /> Science &amp; IT
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/book.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Education &amp; <br /> Training
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/click.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Engeneering &amp; <br /> Technology
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/french-fry.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Hopitality &amp; <br /> Sports
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/news-paper.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Journalism &amp; <br /> Media
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/first-aid-kit.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Medicine &amp; <br /> Health
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/law.png" alt="" />
-                  </div>
-                  <h6 className="name">Law</h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/enverment.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">Social Science</h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/humanity.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">Humanities</h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/recicle.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Enviromental <br /> Studies
-                  </h6>
                 </div>
               </div>
             </div>
-            <div className="tab-pane fade" id="collage">
-              <div className="destination-items-wrap">
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/french-fry.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Hopitality &amp; <br /> Sports
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/news-paper.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Journalism &amp; <br /> Media
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/first-aid-kit.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Medicine &amp; <br /> Health
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/law.png" alt="" />
-                  </div>
-                  <h6 className="name">Law</h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/enverment.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">Social Science</h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/humanity.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">Humanities</h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/recicle.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Enviromental <br /> Studies
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/foresty.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Agriculture &amp; <br /> Foresty
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/science.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    science <br /> &amp; professional
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/art.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Art, Design &amp; <br /> Culture
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/business.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Business &amp; <br /> Management
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/pc.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Computer <br /> Science &amp; IT
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/book.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Education &amp; <br /> Training
-                  </h6>
-                </div>
-                <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img src="assets/img/sections/desipline/click.png" alt="" />
-                  </div>
-                  <h6 className="name">
-                    Engeneering &amp; <br /> Technology
-                  </h6>
-                </div>
-              </div>
-            </div>
+            <div className="col-md-3"></div>
           </div>
         </div>
       </section>
@@ -324,7 +355,7 @@ const HomeScreen = () => {
       {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Steps Section Area Start Here
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="destination-section style-01 margin-top-110 instruction">
+      <section className="destination-section style-01 instruction">
         <div className="container custom-container-01">
           <div className="row justify-content-center">
             <div className="col-lg-12">

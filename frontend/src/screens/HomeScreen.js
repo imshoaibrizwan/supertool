@@ -47,10 +47,7 @@ const HomeScreen = () => {
                 <div className="destination-single-item style-01">
                   <Link to="/htmltopdf">
                     <div className="thumbnail">
-                      <img
-                        src="assets/img/sections/desipline/foresty.png"
-                        alt=""
-                      />
+                      <img src="assets/img/htmltopdf.png" alt="" />
                     </div>
 
                     <h6 className="name">HTML to PDF</h6>

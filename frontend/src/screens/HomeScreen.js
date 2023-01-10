@@ -1,371 +1,9 @@
 import React from "react";
+import { Link, LinkContainer } from "react-router-dom";
 
 const HomeScreen = () => {
   return (
     <>
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Banner Area Start Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="banner-area home-01">
-        <div className="container custom-container-01">
-          <div className="banner-wrapper">
-            <div className="row">
-              <div className="col-xl-7 col-lg-10">
-                <div className="banner-inner">
-                  <p className="subtitle">SPECIAL OFFER FIRST CUSTOMER</p>
-                  <h1 className="title">
-                    Your <span>success</span> journey start with us!
-                  </h1>
-                  <p>
-                    Eduplan Education Can Fulfil Your International Education
-                    Dream <br /> As Per Your Best Fit with world top
-                    universities and collages.
-                  </p>
-                  <div className="header-btn">
-                    <div className="btn-wrap">
-                      <a href="#0" className="btn-common flat-btn btn-active">
-                        apply online
-                      </a>
-                    </div>
-                    <div className="btn-wrap margin-left-20">
-                      <a href="contact.html" className="btn-common fill-btn">
-                        Discover
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-5">
-                <div className="thumbnail">
-                  <img
-                    src="assets/img/shapes/Ellipse-01.png"
-                    className="element-01"
-                    alt="Ellipse"
-                  />
-                  <img
-                    src="assets/img/shapes/Ellipse-02.png"
-                    className="element-02"
-                    alt="Ellipse"
-                  />
-                  <img
-                    src="assets/img/shapes/Vector-15.png"
-                    className="element-03"
-                    alt="vector"
-                  />
-                  <img
-                    src="assets/img/header/plane.png"
-                    className="element-04"
-                    alt="plane"
-                  />
-                  <img
-                    src="assets/img/icon/location.png"
-                    className="element-05"
-                    alt="location"
-                  />
-                  <img
-                    src="assets/img/header/header-img.png"
-                    className="banner-img"
-                    alt="Student"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Banner Area End Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Features Area Start Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="features-section margin-top-100">
-        <img
-          src="assets/img/shapes/graduation.png"
-          className="shape"
-          alt="graduation cap"
-        />
-        <div className="container custom-container-01">
-          <div className="row">
-            <div className="col-lg-4 col-md-6">
-              <div className="icon-box-item">
-                <div className="icon">
-                  <img src="assets/img/icon/idea.png" alt="" />
-                </div>
-                <div className="content">
-                  <h4 className="title">One Stop Study Solution</h4>
-                  <p>
-                    Get a full view so you know where to save. Track spending,
-                    deta keep tab subscription lorem ipsum text
-                  </p>
-                </div>
-                <div className="btn-wrap">
-                  <a href="#0" className="more-btn">
-                    Learn More <i className="fa-solid fa-angle-right icon" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="icon-box-item">
-                <div className="icon">
-                  <img src="assets/img/icon/coversation.png" alt="" />
-                </div>
-                <div className="content">
-                  <h4 className="title">One To One Discussion</h4>
-                  <p>
-                    Get a full view so you know where to save. Track spending,
-                    deta keep tab subscription lorem ipsum text
-                  </p>
-                </div>
-                <div className="btn-wrap">
-                  <a href="#0" className="more-btn">
-                    Learn More <i className="fa-solid fa-angle-right icon" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="icon-box-item">
-                <div className="icon">
-                  <img src="assets/img/icon/emergency.png" alt="" />
-                </div>
-                <div className="content">
-                  <h4 className="title">End To End Support</h4>
-                  <p>
-                    Get a full view so you know where to save. Track spending,
-                    deta keep tab subscription lorem ipsum text
-                  </p>
-                </div>
-                <div className="btn-wrap">
-                  <a href="#0" className="more-btn">
-                    Learn More <i className="fa-solid fa-angle-right icon" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Feedback Area End Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Destinations Area Start Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="margin-top-110 section-bottom-space">
-        <div className="destination-section">
-          <img
-            src="assets/img/shapes/mountant.png"
-            className="shape-01 wow animate__animated animate__delay-1s animate__fadeInUp"
-            alt="mountant"
-          />
-          <div className="plane-wrap">
-            <img
-              src="assets/img/shapes/plane.png"
-              className="shape-02"
-              alt="mountant"
-            />
-          </div>
-          <div className="container custom-container-01">
-            <div className="row justify-content-center">
-              <div className="col-lg-6">
-                <div className="theme-section-title desktop-center text-center">
-                  <h4 className="title">Top Destinations</h4>
-                  <p>
-                    We have quality partners in variety of destinations around
-                    the globe.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="destination-items-wrap">
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img src="assets/img/sections/destination/canda.png" alt="" />
-                </div>
-                <h6 className="name">Canada</h6>
-              </div>
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img src="assets/img/sections/destination/usa.png" alt="" />
-                </div>
-                <h6 className="name">America</h6>
-              </div>
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img
-                    src="assets/img/sections/destination/australia.png"
-                    alt=""
-                  />
-                </div>
-                <h6 className="name">London</h6>
-              </div>
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img src="assets/img/sections/destination/span.png" alt="" />
-                </div>
-                <h6 className="name">Spain</h6>
-              </div>
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img
-                    src="assets/img/sections/destination/franch.png"
-                    alt=""
-                  />
-                </div>
-                <h6 className="name">French</h6>
-              </div>
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img
-                    src="assets/img/sections/destination/swideen.png"
-                    alt=""
-                  />
-                </div>
-                <h6 className="name">Sweden</h6>
-              </div>
-              <div className="destination-single-item">
-                <div className="thumbnail">
-                  <img src="assets/img/sections/destination/italy.png" alt="" />
-                </div>
-                <h6 className="name">Italy</h6>
-              </div>
-            </div>
-            <div className="btn-wrap desktop-center margin-top-40 text-center">
-              <a href="contact.html" className="btn-common fill-btn style-01">
-                apply online
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        Destinations Area End Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        About Section Area Start Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="about-section-area section-top-space about-home-02">
-        <div className="container custom-container-01">
-          <div className="row">
-            <div className="col-lg-6 col-md-12">
-              <div className="theme-section-title">
-                <span className="subtitle">ABOUT US &amp; EXPERIENCE</span>
-                <h4 className="title">
-                  Moving beyond product innovation to gain a competitive
-                  advantage
-                  <svg
-                    className="title-shape style-01"
-                    width={355}
-                    height={15}
-                    viewBox="0 0 355 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      className="path"
-                      d="M351.66 12.6362C187.865 -6.32755 49.6478 6.37132 3.41142 12.6362"
-                      stroke="#764AF1"
-                      strokeWidth={3}
-                      strokeLinecap="square"
-                    />
-                    <path
-                      className="path"
-                      d="M351.66 13C187.865 -5.96378 49.6478 6.73509 3.41142 13"
-                      stroke="#764AF1"
-                      strokeWidth={3}
-                      strokeLinecap="square"
-                    />
-                    <path
-                      className="path"
-                      d="M2.5 5.5C168.5 2.0001 280.5 -1.49994 352.5 8.49985"
-                      stroke="#FFC44E"
-                      strokeWidth={3}
-                      strokeLinecap="square"
-                    />
-                  </svg>
-                </h4>
-              </div>
-              <div className="about-content-wrap">
-                <p>
-                  Ouya Education, which is based in Victoria, British Columbia,
-                  Canada, frequently deals with issues of employment
-                  (recruitment and retention) for temporary foreign workers
-                  (TFW), as well as temporary and permanent residency
-                  applications and other general immigration matters with
-                  Canadian federal departments (IRCC and CBSA).
-                </p>
-                <p>
-                  Education also provides educational consulting services for
-                  student- clients who want to study in Canada, and require help
-                  with the application process.
-                </p>
-                <span className="core">Core strength</span>
-              </div>
-              <div className="counter-section-inner style-a">
-                <div className="single-counterup color-01">
-                  <div className="content-wrap">
-                    <div className="odo-area">
-                      <h3
-                        className="odometer odo-title"
-                        data-odometer-final={15}
-                      ></h3>
-                    </div>
-                    <div className="content">
-                      <h6 className="subtitle">Years Experience</h6>
-                    </div>
-                  </div>
-                </div>
-                <div className="single-counterup color-02">
-                  <div className="content-wrap">
-                    <div className="odo-area">
-                      <h3
-                        className="odometer odo-title style-01"
-                        data-odometer-final={875}
-                      ></h3>
-                    </div>
-                    <div className="content">
-                      <h6 className="subtitle">VISA Approved</h6>
-                    </div>
-                  </div>
-                </div>
-                <div className="single-counterup color-03">
-                  <div className="content-wrap">
-                    <div className="odo-area">
-                      <h3
-                        className="odometer odo-title style-02"
-                        data-odometer-final={96}
-                      ></h3>
-                      {/* <h3 className="title">%</h3> */}
-                    </div>
-                    <div className="content">
-                      <h6 className="subtitle">Admission success</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="btn-wrap">
-                <a href="#" className="btn-common fill-btn">
-                  Get Free Consultation
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <div className="thumbnail">
-                <img
-                  src="assets/img/sections/about/student-in-library.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        About Section Area End Here
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
       {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Category Section Area Start Here
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
@@ -407,16 +45,18 @@ const HomeScreen = () => {
             <div className="tab-pane fade show active" id="discipline">
               <div className="destination-items-wrap">
                 <div className="destination-single-item style-01">
-                  <div className="thumbnail">
-                    <img
-                      src="assets/img/sections/desipline/foresty.png"
-                      alt=""
-                    />
-                  </div>
-                  <h6 className="name">
-                    Agriculture &amp; <br /> Foresty
-                  </h6>
+                  <Link to="/htmltopdf">
+                    <div className="thumbnail">
+                      <img
+                        src="assets/img/sections/desipline/foresty.png"
+                        alt=""
+                      />
+                    </div>
+
+                    <h6 className="name">HTML to PDF</h6>
+                  </Link>
                 </div>
+
                 <div className="destination-single-item style-01">
                   <div className="thumbnail">
                     <img
@@ -748,7 +388,7 @@ const HomeScreen = () => {
       {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Faq Section Area Start Here
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="faq-section-area margin-top-90">
+      <section className="faq-section-area">
         <div className="container custom-container-01">
           <div className="row">
             <div className="col-lg-6">
@@ -843,7 +483,7 @@ const HomeScreen = () => {
                     </div>
                     <div
                       id="collapseThree"
-                      className="collapse show"
+                      className="collapse"
                       data-bs-parent="#accordionOne"
                     >
                       <div className="card-body">

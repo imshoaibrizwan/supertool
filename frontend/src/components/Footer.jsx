@@ -179,8 +179,7 @@ const Footer = () => {
                 <div className="col-lg-12">
                   <div className="copyright-area-inner">
                     <p>
-                      © 2022 Eduplan. All rights reserved | Developed By{" "}
-                      <span>Themeim</span>
+                      © 2023 SUPERTOOL. All rights reserved
                     </p>
                     <div className="footer-social-area">
                       <ul className="social-icon-02">

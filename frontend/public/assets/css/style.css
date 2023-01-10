@@ -3586,7 +3586,7 @@ blockquote:not(.has-light-gray-color):not(.has-very-dark-gray-color):not(.is-sty
   border: 1px solid #E4E4E4;
   border-radius: 20px;
   display: block;
-  padding: 30px 25px;
+  padding: 30px 25px!important;
   margin-bottom: 30px;
   width: calc(14.2857142857% - 20px);
   -webkit-transition: 0.3s all ease;
@@ -11468,4 +11468,8 @@ ul.blocks-gallery-grid li:before {
 .blog-pagination ul li span.current {
   background-color: var(--main-color-one);
   color: #fff;
+}
+
+.jodit-wysiwyg{
+  border: 1px solid black;
 }

@@ -57,7 +57,10 @@ const Footer = () => {
 
                   <div className="col-lg-5 col-md-6 col-sm-6">
                     <div className="footer-widget widget widget_nav_menu">
-                      <h4 className="widget-headline">SUPERTOOL</h4>
+                      <Link to='/'>
+                      <img src='assets/img/logo/Super-tools-white.png' style={{ width: '220px', marginBottom: '2vh' }}/>
+                     
+                      </Link>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
                   </div>

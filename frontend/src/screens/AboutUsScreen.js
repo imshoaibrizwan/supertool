@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutUsScreen = () => {
   return (
@@ -72,16 +73,16 @@ const AboutUsScreen = () => {
                     </ul>
                   </div>
                   <div className="btn-wrap">
-                    <a href="#" className="btn-common btn-new">
+                    <Link to="/contact" className="btn-common btn-new">
                       Get Free Consultation
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
                 <div className="thumbnail ">
                   <div className="right-frame">
-                    <img src="assets/img/about/01.jpg" alt="" />
+                    <img src="assets/img/about/02.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -196,7 +197,7 @@ const AboutUsScreen = () => {
           <div className="chose-area-inner bg-color-01">
             <div
               className="bg-image background-image"
-              style={{ backgroundImage: "url(assets/img/chose-us/01.jpg)" }}
+              style={{ backgroundImage: "url(assets/img/about/03.png)" }}
             ></div>
             <div className="container custom-container-01">
               <div className="row justify-content-end">

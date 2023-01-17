@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, LinkContainer } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const HomeScreen = () => {
   return (
@@ -24,7 +25,7 @@ const HomeScreen = () => {
                       data-bs-toggle="pill"
                       data-bs-target="#discipline"
                     >
-                      Discipline
+                      PDF
                     </a>
                   </li>
                   <li className="nav-item">
@@ -53,16 +54,17 @@ const HomeScreen = () => {
                     </div>
 
                     <div className="destination-single-item style-01">
-                      <Link to="/imagetopdf">
+                      <Link to="/imagestopdf">
                         <div className="thumbnail">
                           <img
                             src="assets/img/sections/desipline/science.png"
                             alt=""
                           />
                         </div>
-                        <h6 className="name">Image to PDf</h6>
+                        <h6 className="name">Images to PDf</h6>
                       </Link>
                     </div>
+
                     <div className="destination-single-item style-01">
                       <div className="thumbnail">
                         <img
@@ -177,6 +179,17 @@ const HomeScreen = () => {
                         />
                       </div>
                       <h6 className="name">Humanities</h6>
+                    </div>
+                    <div className="destination-single-item style-01">
+                      <div className="thumbnail">
+                        <img
+                          src="assets/img/sections/desipline/recicle.png"
+                          alt=""
+                        />
+                      </div>
+                      <h6 className="name">
+                        Enviromental <br /> Studies
+                      </h6>
                     </div>
                     <div className="destination-single-item style-01">
                       <div className="thumbnail">
@@ -355,7 +368,7 @@ const HomeScreen = () => {
       {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Steps Section Area Start Here
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-      <section className="destination-section style-01 instruction">
+      <section className="destination-section style-01 margin-top-110 instruction">
         <div className="container custom-container-01">
           <div className="row justify-content-center">
             <div className="col-lg-12">

@@ -6,7 +6,8 @@ import AboutUsScreen from "./screens/AboutUsScreen";
 import ContactScreen from "./screens/ContactScreen";
 import HtmlToPdfScreen from "./screens/HtmlToPdfScreen";
 import PageNotFoundScreen from "./screens/PageNotFoundScreen";
-import ImageToPdfScreen from "./screens/ImageToPdfScreen";
+// import ImageToPdfScreen from "./screens/ImageToPdfScreen";
+import ImagesToPdfScreen from "./screens/ImagesToPdfScreen";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,7 +26,7 @@ const App = () => {
             <Route path="/about" element={<AboutUsScreen />} />
             <Route path="/contact" element={<ContactScreen />} />
             <Route path="/htmltopdf" element={<HtmlToPdfScreen />} />
-            <Route path="/imagetopdf" element={<ImageToPdfScreen />} />
+            <Route path="/imagestopdf" element={<ImagesToPdfScreen />} />
 
             <Route path="*" element={<PageNotFoundScreen />} />
           </Routes>

@@ -29,11 +29,11 @@ const Header = () => {
           <nav className="navbar navbar-area navbar-expand-lg navigation-style-02">
             <div className="container custom-container custom-container-01">
               <div className="responsive-menu">
-                <div className="logo-wrapper">
-                  <Link to="/" className="logo">
-                    <h3 style={{ color: "red" }}>SUPERTOOL</h3>
+
+                  <Link to="/">
+                  <img src='assets/img/logo/Super-tools-black.png' style={{width: '230px'}}/>
                   </Link>
-                </div>
+              
                 <button
                   className="navbar-toggler navbar-bs-toggler"
                   type="button"

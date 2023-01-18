@@ -6,8 +6,8 @@ import AboutUsScreen from "./screens/AboutUsScreen";
 import ContactScreen from "./screens/ContactScreen";
 import HtmlToPdfScreen from "./screens/HtmlToPdfScreen";
 import PageNotFoundScreen from "./screens/PageNotFoundScreen";
-// import ImageToPdfScreen from "./screens/ImageToPdfScreen";
 import ImagesToPdfScreen from "./screens/ImagesToPdfScreen";
+import CropImageScreen from "./screens/CropImageScreen";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -22,11 +22,12 @@ const App = () => {
 
           {/* All Screens Starts Here*/}
           <Routes>
-            <Route path="/" element={<HomeScreen />} exact />
+            <Route path="/" element={<HomeScreen />} />
             <Route path="/about" element={<AboutUsScreen />} />
             <Route path="/contact" element={<ContactScreen />} />
             <Route path="/htmltopdf" element={<HtmlToPdfScreen />} />
             <Route path="/imagestopdf" element={<ImagesToPdfScreen />} />
+            <Route path="/cropimage" element={<CropImageScreen />} />
 
             <Route path="*" element={<PageNotFoundScreen />} />
           </Routes>

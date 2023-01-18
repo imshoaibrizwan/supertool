@@ -150,8 +150,9 @@ const HtmlToPdfScreen = () => {
                 </span>
                 <p style={{ fontSize: "15px" }}>
                   For Html, click on the three dots icon
-                  <img src="assets/img/3dots.png" /> and select the{" "}
-                  <img src="assets/img/code.png" /> icon.Then write HTML code.
+                  <img src="assets/img/3dots.png" alt="3dots" /> and select the{" "}
+                  <img src="assets/img/code.png" alt="code" /> icon.Then write
+                  HTML code.
                 </p>
                 <span style={{ fontWeight: "bold", fontSize: "17px" }}>
                   Step 02:

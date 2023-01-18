@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { Link, LinkContainer } from "react-router-dom";
-import Loader from "../components/Loader";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   return (
@@ -25,7 +24,7 @@ const HomeScreen = () => {
                       data-bs-toggle="pill"
                       data-bs-target="#discipline"
                     >
-                      PDF
+                      PDF Generator
                     </a>
                   </li>
                   <li className="nav-item">
@@ -35,7 +34,7 @@ const HomeScreen = () => {
                       data-bs-toggle="pill"
                       data-bs-target="#collage"
                     >
-                      Collage
+                      Image Editing Tools
                     </a>
                   </li>
                 </ul>
@@ -45,7 +44,7 @@ const HomeScreen = () => {
                   <div className="destination-items-wrap">
                     <div className="destination-single-item style-01">
                       <Link to="/htmltopdf">
-                        <div className="thumbnail">
+                        <div className="thumbnail child bounce">
                           <img src="assets/img/htmltopdf.png" alt="" />
                         </div>
 
@@ -55,7 +54,7 @@ const HomeScreen = () => {
 
                     <div className="destination-single-item style-01">
                       <Link to="/imagestopdf">
-                        <div className="thumbnail">
+                        <div className="thumbnail child bounce">
                           <img
                             src="assets/img/sections/desipline/science.png"
                             alt=""
@@ -207,15 +206,15 @@ const HomeScreen = () => {
                 <div className="tab-pane fade" id="collage">
                   <div className="destination-items-wrap">
                     <div className="destination-single-item style-01">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/sections/desipline/french-fry.png"
-                          alt=""
-                        />
-                      </div>
-                      <h6 className="name">
-                        Hopitality &amp; <br /> Sports
-                      </h6>
+                      <Link to="/cropimage">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/sections/desipline/french-fry.png"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">Crop Image</h6>
+                      </Link>
                     </div>
                     <div className="destination-single-item style-01">
                       <div className="thumbnail">
@@ -443,9 +442,9 @@ const HomeScreen = () => {
                   ask our experts here.
                 </h6>
                 <div className="btn-wrap">
-                  <a href="#0" className="btn-common flat-btn">
+                  <Link to="/contact" className="btn-common flat-btn">
                     ASK YOUR QUESTIONS
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

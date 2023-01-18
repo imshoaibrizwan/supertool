@@ -27,7 +27,7 @@ const PageNotFoundScreen = () => {
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <img src="assets/img/404/01.png" alt="" />
+                    <img src="assets/img/404/404.png" alt="" />
                   </div>
                 </div>
               </div>

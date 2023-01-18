@@ -61,7 +61,7 @@ const Footer = () => {
                       <img src='assets/img/logo/Super-tools-white.png' style={{ width: '220px', marginBottom: '2vh' }}/>
                      
                       </Link>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                      <p>This tool will instantly upload and transform the file into a PDF. Compress, edit or modify the output file, if necessary. Download the PDF to your device and make your life easy.</p>
                     </div>
                   </div>
                   <div className="col-lg-2 col-md-6 col-sm-6">

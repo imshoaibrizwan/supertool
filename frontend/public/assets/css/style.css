@@ -11723,3 +11723,7 @@ ul.blocks-gallery-grid li:before {
 	align-items: center;
 	justify-content: center;
 }
+
+.compress_section{
+  text-align: center;
+}

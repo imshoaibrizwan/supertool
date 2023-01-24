@@ -17,7 +17,7 @@ const HomeScreen = () => {
                 </div>
 
                 <ul className="nav nav-pills">
-                  <li className="nav-item">
+                  <li className="nav-item" id="pdf">
                     <a
                       href="#"
                       className="nav-link active"
@@ -27,7 +27,7 @@ const HomeScreen = () => {
                       PDF Generator
                     </a>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item" id="img">
                     <a
                       href="#"
                       className="nav-link"
@@ -217,15 +217,15 @@ const HomeScreen = () => {
                       </Link>
                     </div>
                     <div className="destination-single-item style-01">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/sections/desipline/news-paper.png"
-                          alt=""
-                        />
-                      </div>
-                      <h6 className="name">
-                        Journalism &amp; <br /> Media
-                      </h6>
+                      <Link to="/compressimage">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/sections/desipline/news-paper.png"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">Compress Image</h6>
+                      </Link>
                     </div>
                     <div className="destination-single-item style-01">
                       <div className="thumbnail">

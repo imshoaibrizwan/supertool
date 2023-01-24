@@ -92,43 +92,34 @@ const Footer = () => {
                       <h4 className="widget-headline">Popular Tools</h4>
                       <ul>
                         <li>
-                          <a href="#">Counselling</a>
+                          <a href="#pdf">PDF Generator</a>
                         </li>
                         <li>
-                          <a href="#">Test Preparation</a>
+                          <a href="#img">Image Editing Tools</a>
                         </li>
-                        <li>
-                          <a href="#">Admission</a>
-                        </li>
-                        <li>
-                          <a href="#">Education Loan</a>
-                        </li>
-                        <li>
-                          <a href="#">Visa Processing</a>
-                        </li>
+                      
                       </ul>
                     </div>
                   </div>
                   <div className="col-lg-3 col-md-6 col-sm-6">
                     <div className="footer-widget widget widget_nav_menu">
-                      <h4 className="widget-headline">Location</h4>
+                      <h4 className="widget-headline">Information</h4>
                       <ul className="contact_info_list">
                         <li className="single-info-item">
                           <div className="icon">
                             <img src="assets/img/icon/location-02.png" alt="" />
                           </div>
                           <div className="details">
-                            8502 Preston Rd. Inglewood, Maine Bangladesh
+                            Main Bazar, Wazirabad, Pakistan
                           </div>
                         </li>
-                        <li className="single-info-item">
-                          <div className="icon me-4">
-                            <img src="assets/img/icon/edu-award.png" alt="" />
+                    
+                        <div style={{ marginTop: '2vh' }}>
+                          <p>Contact No: +92 304 79 79 567</p>
+                         
+                          <p>Email: info@limecircles.com</p>
                           </div>
-                          <div className="icon">
-                            <img src="assets/img/icon/iso.png" alt="" />
-                          </div>
-                        </li>
+                       
                       </ul>
                     </div>
                   </div>

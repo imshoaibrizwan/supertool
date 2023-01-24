@@ -8,6 +8,7 @@ import HtmlToPdfScreen from "./screens/HtmlToPdfScreen";
 import PageNotFoundScreen from "./screens/PageNotFoundScreen";
 import ImagesToPdfScreen from "./screens/ImagesToPdfScreen";
 import CropImageScreen from "./screens/CropImageScreen";
+import CompressImageScreen from "./screens/CompressImageScreen";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/htmltopdf" element={<HtmlToPdfScreen />} />
             <Route path="/imagestopdf" element={<ImagesToPdfScreen />} />
             <Route path="/cropimage" element={<CropImageScreen />} />
+            <Route path="/compressimage" element={<CompressImageScreen />} />
 
             <Route path="*" element={<PageNotFoundScreen />} />
           </Routes>

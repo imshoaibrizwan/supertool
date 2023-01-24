@@ -5,9 +5,6 @@ import { HiOutlineDownload } from "react-icons/hi";
 import { Alert } from "react-bootstrap";
 import Loader from "../components/Loader";
 import { Row, Col, Container } from "react-bootstrap";
-import { BsFillHandThumbsUpFill, BsFileEarmarkFill } from "react-icons/bs";
-import { FaLock } from "react-icons/fa";
-import { TbArrowsLeftRight } from "react-icons/tb";
 import { FaCropAlt } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 
@@ -37,6 +34,7 @@ const CropImageScreen = () => {
       reader.addEventListener("load", () => {
         setImage(reader.result);
       });
+      setShow(false);
     }
   };
 

@@ -640,10 +640,8 @@ class ImagesToPdfScreen extends React.Component {
       <div style={{ paddingTop: "40px", textAlign: "center" }}>
         <h1 style={{ textAlign: "center" }}>Images to PDF</h1>
         Convert JPEG or PNG images to PDF without uploading your sensitve data
-        anywhere.
-        <br />
-        Files are processed entirely on your device and does not get uploaded to
-        any server.
+        anywhere. Files are processed entirely on your device and does not get
+        uploaded to any server.
       </div>
     );
 

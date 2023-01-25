@@ -108,7 +108,7 @@ const HtmlToPdfScreen = () => {
                 </>
 
                 {show === true && (
-                  <div>
+                  <div style={{ textAlign: "center" }}>
                     <Alert variant={"success"}>
                       Pdf Generated Successfully
                     </Alert>

@@ -224,19 +224,19 @@ const HomeScreen = () => {
                             alt=""
                           />
                         </div>
-                        <h6 className="name">Compress Image</h6>
+                        <h6 className="name">Image Compressor</h6>
                       </Link>
                     </div>
                     <div className="destination-single-item style-01">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/sections/desipline/first-aid-kit.png"
-                          alt=""
-                        />
-                      </div>
-                      <h6 className="name">
-                        Medicine &amp; <br /> Health
-                      </h6>
+                      <Link to="/videotogif">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/sections/desipline/first-aid-kit.png"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">Video to GIF Converter</h6>
+                      </Link>
                     </div>
                     <div className="destination-single-item style-01">
                       <div className="thumbnail">

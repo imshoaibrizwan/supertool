@@ -57,9 +57,7 @@ const CropImageScreen = () => {
           <div style={{ paddingTop: "40px", textAlign: "center" }}>
             <h1 style={{ textAlign: "center" }}>Crop Image</h1>
             Crop JPG, PNG by defining a rectangle in pixels. Cut your image
-            online.
-            <br />
-            Files are processed entirely on your device and does not get
+            online. Files are processed entirely on your device and does not get
             uploaded to any server.
           </div>
         </div>
@@ -117,7 +115,7 @@ const CropImageScreen = () => {
                     ) : null}
                   </div>
                   {show === true && (
-                    <div>
+                    <div style={{ textAlign: "center" }}>
                       <Alert variant={"success"}>
                         Image Cropped Successfully
                       </Alert>

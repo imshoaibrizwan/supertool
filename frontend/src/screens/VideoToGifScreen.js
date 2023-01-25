@@ -1,75 +1,82 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Row, Col, Container, Image } from "react-bootstrap";
 import Loader from "../components/Loader";
 import { FaCompressArrowsAlt } from "react-icons/fa";
 import { HiOutlineDownload } from "react-icons/hi";
 import { TbWorld } from "react-icons/tb";
-import imageCompression from "browser-image-compression";
+import { MdSlowMotionVideo } from "react-icons/md";
 import { Alert } from "react-bootstrap";
+import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
+import { saveAs } from "file-saver";
 
-const CompressImageScreen = () => {
+const ffmpeg = createFFmpeg({ log: true });
+
+const VideoToGifScreen = () => {
   const inputRef = useRef();
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [origImage, setOrigImage] = useState("");
-  const [origImageFile, setOrigImageFile] = useState("");
-  const [compressedImage, setCompressedImage] = useState("");
-  const [fileName, setFileName] = useState("");
+  const [gifUrl, setGifUrl] = useState("");
+  const [video, setVideo] = useState();
+  const [name, setName] = useState();
+  const [ready, setReady] = useState(true);
 
   const triggerFileSelectPopup = () => inputRef.current.click();
 
-  const handle = (e) => {
-    const imageFile = e.target.files[0];
-
-    setOrigImage(imageFile);
-
-    setOrigImageFile(URL.createObjectURL(imageFile));
-
-    setFileName(imageFile.name);
-    setShow(false);
-  };
-
-  const handleCompressImage = (e) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    const options = {
-      maxSizeMB: 1,
-
-      maxWidthOrHeight: 500,
-
-      useWebWorker: true,
-    };
-
-    if (options.maxSizeMB >= origImage / 1024) {
-      <Alert variant={"danger"}>Image is too small, cant be compressed</Alert>;
-
-      return 0;
+  const init = async () => {
+    if (!ffmpeg.isLoaded()) {
+      await ffmpeg.load();
     }
 
-    let output;
+    setReady(false);
+  };
 
-    imageCompression(origImage, options).then((x) => {
-      output = x;
-
-      const downloadLink = URL.createObjectURL(output);
-
-      setCompressedImage(downloadLink);
+  const setVid = (e) => {
+    setVideo(e.target.files?.item(0));
+    setName(e.target.files[0].name);
+    setShow(false);
+  };
+  const convertToGif = async () => {
+    setLoading(true);
+    await ffmpeg.FS("writeFile", name, await fetchFile(video));
+    await ffmpeg.run(
+      "-i",
+      name,
+      "-t",
+      "2.5",
+      "-ss",
+      "2.0",
+      "-f",
+      "gif",
+      "output.gif"
+    );
+    const data = ffmpeg.FS("readFile", "output.gif");
+    const url = URL.createObjectURL(
+      new Blob([data.buffer], { type: "image/gif" })
+    );
+    setGifUrl(url);
+    if (url) {
       setLoading(false);
       setShow(true);
-    });
+    }
   };
+  const downloadGif = () => {
+    saveAs(gifUrl, "output.gif");
+  };
+  useEffect(() => {
+    init();
+  }, [init]);
   return (
     <>
       {loading && <Loader status={loading} />}
+      {ready && <Loader status={ready} />}
+
       <div className="crop-div">
         <div className="container" style={{ marginBottom: "5vh" }}>
           <div style={{ paddingTop: "40px", textAlign: "center" }}>
-            <h1 style={{ textAlign: "center" }}>Compress Image</h1>
-            Our Image Compressor uses a smart combination of compression
-            algorithms and best optimization to compress the size of your images
-            while keeping the same level of quality.
+            <h1 style={{ textAlign: "center" }}>Video to GIF Converter</h1>
+            Turn a video into a GIF and share it more conveniently across the
+            internet. Now you turn a video into an animated GIF with our free
+            Video to GIF Converter tool. Upload your video now!
           </div>
         </div>
         <div className="container">
@@ -79,9 +86,9 @@ const CompressImageScreen = () => {
                 <input
                   type="file"
                   ref={inputRef}
-                  accept="image/*"
+                  accept="video/*"
                   style={{ display: "none" }}
-                  onChange={(e) => handle(e)}
+                  onChange={(e) => setVid(e)}
                 />
               </div>
 
@@ -93,25 +100,31 @@ const CompressImageScreen = () => {
                 <span className="drop-title">Drop files here</span>
                 or
                 <button className="big-btn" onClick={triggerFileSelectPopup}>
-                  Select Image
+                  Select Video
                 </button>
               </label>
 
-              <div className="compress_section">
+              <div className="gif_section">
                 <Row>
                   <Col lg="12" md="12">
-                    {origImageFile && <Image src={origImageFile} />}
+                    {video && (
+                      <video
+                        controls
+                        width="80%"
+                        src={URL.createObjectURL(video)}
+                      ></video>
+                    )}
                   </Col>
 
                   <Col lg="12" md="12" style={{ marginTop: "2vh" }}>
-                    {show === true && (
+                    {show && (
                       <div>
                         <Alert variant={"success"}>
-                          Image Compressed Successfully
+                          GIF Generated Successfully.
                         </Alert>
                       </div>
                     )}
-                    {origImageFile && (
+                    {video && name && (
                       <button
                         className="button"
                         style={{
@@ -122,16 +135,15 @@ const CompressImageScreen = () => {
                           padding: "5px 12px",
                           fontSize: "20px",
                           marginRight: "1vh",
+                          marginBottom: "1vh",
                         }}
-                        onClick={(e) => {
-                          handleCompressImage(e);
-                        }}
+                        onClick={convertToGif}
                       >
-                        Compress
+                        Convert to GIF
                       </button>
                     )}
 
-                    {compressedImage && show && (
+                    {show && (
                       <button
                         className="button"
                         style={{
@@ -142,13 +154,12 @@ const CompressImageScreen = () => {
                           padding: "5px 12px",
                           fontSize: "20px",
                         }}
+                        onClick={downloadGif}
                       >
-                        <a href={compressedImage} download={fileName}>
-                          <HiOutlineDownload
-                            style={{ fontSize: "23px", color: "white" }}
-                          />
-                          Download
-                        </a>
+                        <HiOutlineDownload
+                          style={{ fontSize: "23px", color: "white" }}
+                        />
+                        Download
                       </button>
                     )}
                   </Col>
@@ -163,19 +174,20 @@ const CompressImageScreen = () => {
                       md="12"
                       style={{ textAlign: "center", marginTop: "1vh" }}
                     >
-                      <FaCompressArrowsAlt size="40px" color="#06F28C" />
+                      <MdSlowMotionVideo size="40px" color="#06F28C" />
                       <h3 style={{ padding: "1vh 0vh" }}>
-                        How To Compress An Image Online?
+                        How To Convert GIF from Video Online?
                       </h3>
                       <p style={{ textAlign: "left" }}>
-                        The crop image function is, as the name suggests,
-                        reserved for photos and image files only. This means it
-                        will only work correctly if you upload an image to crop.
-                        Other files like documents won’t work. If you are
-                        satisfied with cropping the image, you can save the
-                        cropped image in your drive.
-                        <br /> <b>Image Formats:</b> BMP, EPS, GIF, HDR/EXR,
-                        ICO, JPG, PNG, SVG, TGA, TIFF, WBMP, WebP
+                        With this online file onverter, you can turn your videos
+                        into animated GIFs. Grab your video clip from your
+                        phone, computer to upload it. Optionally, Then, click
+                        the <b>Convert to GIF</b> button and wait for the
+                        completion then download the GIF.
+                        <br /> <b>Video Formats: </b>There is almost no
+                        limitation to which kinds of videos you can convert to
+                        animated GIF. Most popular and common files are
+                        supported, such as: 3GP, AVI, FLV, MOV, MP4, WebM, WMV.
                       </p>
                     </Col>
                     <Col
@@ -185,15 +197,15 @@ const CompressImageScreen = () => {
                     >
                       <TbWorld size="40px" color="#06F28C" />
                       <h3 style={{ padding: "1vh 0vh" }}>
-                        Compress Photos Online
+                        Generate GIF Online
                       </h3>
                       <p style={{ textAlign: "left" }}>
                         From your phone, tablet, desktop computer, or someone
                         else’s pc. From work, vacation, home or during commute.
-                        With SUPERTOOL, you can compress your images and photos.
-                        All you need is a working internet connection. With
-                        SUPERTOOL you can compress photo and image files on the
-                        go!
+                        With SUPERTOOL, you can convert your images and photos
+                        to GIFs. All you need is a working internet connection.
+                        With SUPERTOOL you can compress photo and image files on
+                        the go!
                       </p>
                     </Col>
                   </Row>
@@ -208,4 +220,4 @@ const CompressImageScreen = () => {
   );
 };
 
-export default CompressImageScreen;
+export default VideoToGifScreen;

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Row, Col, Container, Image } from "react-bootstrap";
 import Loader from "../components/Loader";
-import { FaCompressArrowsAlt } from "react-icons/fa";
 import { HiOutlineDownload } from "react-icons/hi";
 import { TbWorld } from "react-icons/tb";
 import { MdSlowMotionVideo } from "react-icons/md";

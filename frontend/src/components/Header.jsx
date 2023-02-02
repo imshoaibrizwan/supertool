@@ -75,7 +75,7 @@ const Header = () => {
                 </div>
                 <div className="btn-wrap">
                   <Link to="/contact" className="btn-common nav-btn">
-                    Free consultation
+                    Contact Us
                   </Link>
                 </div>
               </div>

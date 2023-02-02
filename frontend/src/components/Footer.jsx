@@ -21,8 +21,7 @@ const Footer = () => {
                         <div className="content">
                           <h4 className="title">Subscribe our newsletter</h4>
                           <p>
-                            Enter your mail address to get our updates, offer
-                            and study abroad related all updates
+                          Enter your mail address to get our updates, of our latest tools
                           </p>
                         </div>
                       </div>
@@ -105,14 +104,7 @@ const Footer = () => {
                     <div className="footer-widget widget widget_nav_menu">
                       <h4 className="widget-headline">Information</h4>
                       <ul className="contact_info_list">
-                        <li className="single-info-item">
-                          <div className="icon">
-                            <img src="assets/img/icon/location-02.png" alt="" />
-                          </div>
-                          <div className="details">
-                            Main Bazar, Wazirabad, Pakistan
-                          </div>
-                        </li>
+                      
                     
                         <div style={{ marginTop: '2vh' }}>
                           <p>Contact No: +92 304 79 79 567</p>

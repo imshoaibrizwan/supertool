@@ -9,8 +9,9 @@ import PageNotFoundScreen from "./screens/PageNotFoundScreen";
 import ImagesToPdfScreen from "./screens/ImagesToPdfScreen";
 import CropImageScreen from "./screens/CropImageScreen";
 import CompressImageScreen from "./screens/CompressImageScreen";
-import VideoToGifScreen from "./screens/VideoToGifScreen";
 import ResizeImageScreen from "./screens/ResizeImageScreen";
+import ImageToTextScreen from "./screens/ImageToTextScreen";
+import HashStringScreen from "./screens/HashStringScreen";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -32,8 +33,9 @@ const App = () => {
             <Route path="/imagestopdf" element={<ImagesToPdfScreen />} />
             <Route path="/cropimage" element={<CropImageScreen />} />
             <Route path="/compressimage" element={<CompressImageScreen />} />
-            <Route path="/videotogif" element={<VideoToGifScreen />} />
             <Route path="/resizeimage" element={<ResizeImageScreen />} />
+            <Route path="/imagetotext" element={<ImageToTextScreen />} />
+            <Route path="/hashstring" element={<HashStringScreen />} />
 
             <Route path="*" element={<PageNotFoundScreen />} />
           </Routes>

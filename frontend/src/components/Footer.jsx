@@ -91,10 +91,13 @@ const Footer = () => {
                       <h4 className="widget-headline">Popular Tools</h4>
                       <ul>
                         <li>
-                          <a href="#pdf">PDF Generator</a>
+                          <Link to="/htmltopdf">HTML to PDF</Link>
                         </li>
                         <li>
-                          <a href="#img">Image Editing Tools</a>
+                          <Link to="/imagestopdf">Images to PDF</Link>
+                        </li>
+                        <li>
+                          <Link to="/compressimage">Image Compressor</Link>
                         </li>
                       
                       </ul>

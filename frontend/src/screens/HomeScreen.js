@@ -16,7 +16,7 @@ const HomeScreen = () => {
                   <h4 className="title">Popular Tools</h4>
                 </div>
 
-                <ul className="nav nav-pills">
+                {/* <ul className="nav nav-pills">
                   <li className="nav-item" id="pdf">
                     <a
                       href="#"
@@ -37,7 +37,7 @@ const HomeScreen = () => {
                       Image Editing Tools
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
               <div className="tab-content">
                 <div className="tab-pane fade show active" id="discipline">
@@ -45,7 +45,12 @@ const HomeScreen = () => {
                     <div className="destination-single-item style-01 tools">
                       <Link to="/htmltopdf">
                         <div className="thumbnail child bounce">
-                          <img src="assets/img/htmltopdf.png" alt="" />
+                          <img
+                            src="assets/img/tools/word_pdf.png"
+                            alt=""
+                            width="60"
+                            height="60"
+                          />
                         </div>
 
                         <h6 className="name">HTML to PDF</h6>
@@ -56,23 +61,24 @@ const HomeScreen = () => {
                       <Link to="/imagestopdf">
                         <div className="thumbnail child bounce">
                           <img
-                            src="assets/img/sections/desipline/science.png"
+                            src="assets/img/tools/png_to_pdf.png"
                             alt=""
+                            width="50"
+                            height="50"
                           />
                         </div>
                         <h6 className="name">Images to PDf</h6>
                       </Link>
                     </div>
-                  </div>
-                </div>
-                <div className="tab-pane fade" id="collage">
-                  <div className="tools-wrap">
+
                     <div className="destination-single-item style-01 tools">
                       <Link to="/cropimage">
                         <div className="thumbnail child bounce">
                           <img
-                            src="assets/img/sections/desipline/french-fry.png"
+                            src="assets/img/tools/crop_img.png"
                             alt=""
+                            width="50"
+                            height="50"
                           />
                         </div>
                         <h6 className="name">Crop Image</h6>
@@ -82,8 +88,92 @@ const HomeScreen = () => {
                       <Link to="/compressimage">
                         <div className="thumbnail child bounce">
                           <img
-                            src="assets/img/sections/desipline/news-paper.png"
+                            src="assets/img/tools/img_compression.png"
                             alt=""
+                            width="50"
+                            height="50"
+                          />
+                        </div>
+                        <h6 className="name">Image Compressor</h6>
+                      </Link>
+                    </div>
+                    {/* <div className="destination-single-item style-01 tools">
+                      <Link to="/videotogif">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/tools/video_gif.png"
+                            alt=""
+                            width="50"
+                            height="50"
+                          />
+                        </div>
+                        <h6 className="name">Video to GIF Converter</h6>
+                      </Link>
+                    </div> */}
+                    <div className="destination-single-item style-01 tools">
+                      <Link to="/resizeimage">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/tools/img_resizer.png"
+                            width="50"
+                            height="50"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">Image Resizer</h6>
+                      </Link>
+                    </div>
+                    <div className="destination-single-item style-01 tools">
+                      <Link to="/imagetotext">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/tools/img_text.png"
+                            width="50"
+                            height="50"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">Image to Text Converter</h6>
+                      </Link>
+                    </div>
+                    <div className="destination-single-item style-01 tools">
+                      <Link to="/hashstring">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/tools/md5_generator.png"
+                            width="50"
+                            height="50"
+                            alt=""
+                          />
+                        </div>
+                        <h6 className="name">MD5 GENERATOR</h6>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="tab-pane fade" id="collage">
+                  <div className="tools-wrap">
+                    <div className="destination-single-item style-01 tools">
+                      <Link to="/cropimage">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/tools/crop_img.png"
+                            alt=""
+                            width="50"
+                            height="50"
+                          />
+                        </div>
+                        <h6 className="name">Crop Image</h6>
+                      </Link>
+                    </div>
+                    <div className="destination-single-item style-01 tools">
+                      <Link to="/compressimage">
+                        <div className="thumbnail child bounce">
+                          <img
+                            src="assets/img/tools/img_compression.png"
+                            alt=""
+                            width="50"
+                            height="50"
                           />
                         </div>
                         <h6 className="name">Image Compressor</h6>
@@ -93,8 +183,10 @@ const HomeScreen = () => {
                       <Link to="/videotogif">
                         <div className="thumbnail child bounce">
                           <img
-                            src="assets/img/sections/desipline/first-aid-kit.png"
+                            src="assets/img/tools/video_gif.png"
                             alt=""
+                            width="50"
+                            height="50"
                           />
                         </div>
                         <h6 className="name">Video to GIF Converter</h6>
@@ -104,7 +196,9 @@ const HomeScreen = () => {
                       <Link to="/resizeimage">
                         <div className="thumbnail child bounce">
                           <img
-                            src="assets/img/sections/desipline/first-aid-kit.png"
+                            src="assets/img/tools/img_resizer.png"
+                            width="50"
+                            height="50"
                             alt=""
                           />
                         </div>
@@ -112,7 +206,7 @@ const HomeScreen = () => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-md-3"></div>

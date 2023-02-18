@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomeScreen from "./screens/HomeScreen";
@@ -18,24 +18,56 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
+  const [showPage, setShowPage] = useState(true);
+
+  const setShowHandler = (showPage) => {
+    setShowPage(showPage);
+  };
   return (
     <Router>
       <ScrollToTop>
         <main className="page-wrapper">
-          <Header />
+          <Header setShowHandler={setShowHandler} />
 
           {/* All Screens Starts Here*/}
           <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/about" element={<AboutUsScreen />} />
-            <Route path="/contact" element={<ContactScreen />} />
-            <Route path="/htmltopdf" element={<HtmlToPdfScreen />} />
-            <Route path="/imagestopdf" element={<ImagesToPdfScreen />} />
-            <Route path="/cropimage" element={<CropImageScreen />} />
-            <Route path="/compressimage" element={<CompressImageScreen />} />
-            <Route path="/resizeimage" element={<ResizeImageScreen />} />
-            <Route path="/imagetotext" element={<ImageToTextScreen />} />
-            <Route path="/hashstring" element={<HashStringScreen />} />
+            <Route path="/" element={<HomeScreen showPage={showPage} />} />
+            <Route
+              path="/about"
+              element={<AboutUsScreen showPage={showPage} />}
+            />
+            <Route
+              path="/contact"
+              element={<ContactScreen showPage={showPage} />}
+            />
+            <Route
+              path="/htmltopdf"
+              element={<HtmlToPdfScreen showPage={showPage} />}
+            />
+            <Route
+              path="/imagestopdf"
+              element={<ImagesToPdfScreen showPage={showPage} />}
+            />
+            <Route
+              path="/cropimage"
+              element={<CropImageScreen showPage={showPage} />}
+            />
+            <Route
+              path="/compressimage"
+              element={<CompressImageScreen showPage={showPage} />}
+            />
+            <Route
+              path="/resizeimage"
+              element={<ResizeImageScreen showPage={showPage} />}
+            />
+            <Route
+              path="/imagetotext"
+              element={<ImageToTextScreen showPage={showPage} />}
+            />
+            <Route
+              path="/hashstring"
+              element={<HashStringScreen showPage={showPage} />}
+            />
 
             <Route path="*" element={<PageNotFoundScreen />} />
           </Routes>

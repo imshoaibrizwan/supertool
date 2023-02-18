@@ -1,7 +1,42 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
+import SearchResultsScreen from '../screens/SearchResultsScreen';
+import toolsDetails from '../screens/utils/toolsDetails';
 
-const Header = () => {
+const Header = ({setShowHandler}) => {
+  const [searchField, setSearchField] = useState("");
+  const [showSearchResults, setShowSearchResults] = useState(false)
+
+  const onChangeHandler = (e) => {
+    setSearchField(e.target.value)
+    setShowSearchResults(true)
+    setShowHandler(false)
+  }
+
+  const searchedRouteHandler = () => {
+    setShowHandler(true)
+     setShowSearchResults(false)
+  }
+
+    const filteredTools = toolsDetails.filter(
+    tool => {
+      return (
+        tool
+        .name
+        .toLowerCase()
+        .includes(searchField.toLowerCase()) 
+      );
+    }
+  );
+
+  function searchList() {
+    return (
+      <div>
+        <SearchResultsScreen filteredTools={filteredTools} searchField={searchField } searchedRouteHandler={searchedRouteHandler} />
+      </div>
+    );
+  }
+
   return (
     <>
       {/*  search Popup start */}
@@ -61,9 +96,21 @@ const Header = () => {
                   <li>
                     <Link to="/about">About Us</Link>
                   </li>
+                  <li>
+                  <Link to="/contact" >
+                    Contact Us
+                  </Link>
+                  </li>
+                  <li>
+                  <div className="search-container">
+                    <input type="text" placeholder="Search..." onChange={onChangeHandler}/>
+                    <div className="searchIcon"></div>
+                  </div>
+                  </li>
                 </ul>
               </div>
-              <div className="nav-right-content">
+            
+              {/* <div className="nav-right-content">
                 <div className="icon-part">
                   <ul>
                     <li id="search">
@@ -78,14 +125,15 @@ const Header = () => {
                     Contact Us
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </nav>
         </div>
         {/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         Nav Area End Here
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/}
-   
+    
+   { showSearchResults && searchField !== "" ? searchList() : setShowHandler(true)}
     </>
   )
 }

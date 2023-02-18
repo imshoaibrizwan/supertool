@@ -45,6 +45,7 @@ class ImagesToPdfScreen extends React.Component {
     };
     this.fileInput = React.createRef();
   }
+
   render() {
     let pageWrapper = {
       height: "192px",
@@ -148,7 +149,7 @@ class ImagesToPdfScreen extends React.Component {
                     style={{ textAlign: "center", marginTop: "1vh" }}
                   >
                     <TbArrowsLeftRight size="40px" color="#06F28C" />
-                    <h3 style={{ padding: "1vh 0vh" }}>Compress PDF Size</h3>
+                    <h3 style={{ padding: "1vh 0vh" }}>What You Need</h3>
                     <p>
                       What you need to successfully convert from image to PDF is
                       your file and SUPERTOOL. No software, no program, no app –
@@ -645,20 +646,22 @@ class ImagesToPdfScreen extends React.Component {
       </div>
     );
 
-    if (this.state.images.length < 1) {
-      return (
-        <div>
-          {pageHeader}
-          <input
-            type="file"
-            ref={this.fileInput}
-            onChange={() => this.readfiles(this.fileInput.current.files)}
-            multiple
-            style={{ display: "none" }}
-          ></input>
-          {landing}
-        </div>
-      );
+    if (this.props.showPage) {
+      if (this.state.images.length < 1) {
+        return (
+          <div>
+            {pageHeader}
+            <input
+              type="file"
+              ref={this.fileInput}
+              onChange={() => this.readfiles(this.fileInput.current.files)}
+              multiple
+              style={{ display: "none" }}
+            ></input>
+            {landing}
+          </div>
+        );
+      }
     }
 
     const busy = {};
@@ -667,57 +670,63 @@ class ImagesToPdfScreen extends React.Component {
     }
 
     return (
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          height: "100%",
-          overflow: "hidden",
-          flex: "1",
-          paddingBottom: "6vh",
-        }}
-      >
-        {pageHeader}
-        <div
-          style={{
-            display: "flex",
-            overflow: "hidden",
-            flex: "1",
-            paddingTop: "6vh",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "100%",
-              flex: "1",
-              overflow: "auto",
-              background: "rgb(240,240,240)",
-            }}
-            onClick={this.clearSelection}
-          >
-            {listView}
-            <div style={{ flex: "1" }}></div>
-          </div>
-          {options}
-        </div>
-        {actions}
-        <input
-          type="file"
-          accept={"image/*"}
-          ref={this.fileInput}
-          onChange={() => this.readfiles(this.fileInput.current.files)}
-          multiple
-          style={{ display: "none" }}
-        />
-        <div className="busy" style={busy}>
-          {/* Generating PDF, Please wait... */}
-          <Loader />
-        </div>
-      </div>
+      <>
+        {this.props.showPage && (
+          <>
+            <div
+              className="container"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+                height: "100%",
+                overflow: "hidden",
+                flex: "1",
+                paddingBottom: "6vh",
+              }}
+            >
+              {pageHeader}
+              <div
+                style={{
+                  display: "flex",
+                  overflow: "hidden",
+                  flex: "1",
+                  paddingTop: "6vh",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    flex: "1",
+                    overflow: "auto",
+                    background: "rgb(240,240,240)",
+                  }}
+                  onClick={this.clearSelection}
+                >
+                  {listView}
+                  <div style={{ flex: "1" }}></div>
+                </div>
+                {options}
+              </div>
+              {actions}
+              <input
+                type="file"
+                accept={"image/*"}
+                ref={this.fileInput}
+                onChange={() => this.readfiles(this.fileInput.current.files)}
+                multiple
+                style={{ display: "none" }}
+              />
+              <div className="busy" style={busy}>
+                {/* Generating PDF, Please wait... */}
+                <Loader />
+              </div>
+            </div>
+          </>
+        )}
+      </>
     );
   }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { PageSizes, PDFDocument, degrees } from "pdf-lib";
 import EXIF from "exif-js";
-import { polyfill } from "mobile-drag-drop";
+// import { polyfill } from "mobile-drag-drop";
 import Loader from "../components/Loader";
 import { Row, Col, Container } from "react-bootstrap";
 import { BsFillHandThumbsUpFill, BsFileEarmarkFill } from "react-icons/bs";
@@ -9,13 +9,13 @@ import { FaLock } from "react-icons/fa";
 import { TbArrowsLeftRight } from "react-icons/tb";
 
 // optional import of scroll behaviour
-import { scrollBehaviourDragImageTranslateOverride } from "mobile-drag-drop/scroll-behaviour";
+// import { scrollBehaviourDragImageTranslateOverride } from "mobile-drag-drop/scroll-behaviour";
 
 // options are optional ;)
-polyfill({
-  // use this to make use of the scroll behaviour
-  dragImageTranslateOverride: scrollBehaviourDragImageTranslateOverride,
-});
+// polyfill({
+//   // use this to make use of the scroll behaviour
+//   dragImageTranslateOverride: scrollBehaviourDragImageTranslateOverride,
+// });
 
 window.addEventListener("touchmove", function () {});
 

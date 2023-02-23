@@ -4,6 +4,7 @@ import SearchResultsScreen from '../screens/SearchResultsScreen';
 import toolsDetails from '../screens/utils/toolsDetails';
 
 const Header = ({setShowHandler}) => {
+  
   const [searchField, setSearchField] = useState("");
   const [showSearchResults, setShowSearchResults] = useState(false)
 

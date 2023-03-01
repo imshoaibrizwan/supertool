@@ -24,7 +24,7 @@ const App = () => {
     setShowPage(showPage);
   };
   return (
-    <Router basename="/supertool">
+    <Router>
       <ScrollToTop>
         <main className="page-wrapper">
           <Header setShowHandler={setShowHandler} />

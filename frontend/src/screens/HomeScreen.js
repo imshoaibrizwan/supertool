@@ -151,6 +151,21 @@ const HomeScreen = ({ showPage }) => {
                             <h6 className="name">MD5 GENERATOR</h6>
                           </Link>
                         </div>
+                        <div className="destination-single-item style-01 tools">
+                          <Link to="/youtubethumbnail">
+                            <div className="thumbnail child bounce">
+                              <img
+                                src="assets/img/tools/md5_generator.png"
+                                width="50"
+                                height="50"
+                                alt=""
+                              />
+                            </div>
+                            <h6 className="name">
+                              Youtube Thumbnail Generator
+                            </h6>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                     {/* <div className="tab-pane fade" id="collage">

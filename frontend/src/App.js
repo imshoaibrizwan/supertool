@@ -12,6 +12,7 @@ import CompressImageScreen from "./screens/CompressImageScreen";
 import ResizeImageScreen from "./screens/ResizeImageScreen";
 import ImageToTextScreen from "./screens/ImageToTextScreen";
 import HashStringScreen from "./screens/HashStringScreen";
+import YoutubeThumbnailScreen from "./screens/YoutubeThumbnailScreen";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -67,6 +68,10 @@ const App = () => {
             <Route
               path="/hashstring"
               element={<HashStringScreen showPage={showPage} />}
+            />
+            <Route
+              path="/youtubethumbnail"
+              element={<YoutubeThumbnailScreen showPage={showPage} />}
             />
 
             <Route path="*" element={<PageNotFoundScreen />} />

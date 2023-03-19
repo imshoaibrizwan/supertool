@@ -41,6 +41,12 @@ const toolsDetails = [
     name: "MD5 GENERATOR",
     path: "/hashstring",
   },
+  {
+    id: 8,
+    imgPath: "/assets/img/tools/md5_generator.png",
+    name: "Youtube Thumbnail Generator",
+    path: "/youtubethumbnail",
+  },
 ];
 
 export default toolsDetails;
